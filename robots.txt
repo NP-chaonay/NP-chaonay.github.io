@@ -1,0 +1,22 @@
+# Joke put here: Never Gonna Give You Up!
+# For Siteadmin: Sync this and sitemap!
+# For Remark: generally, each rule has double options: $ and ?*
+User-agent: *
+Allow: /rickroll$
+Allow: /rickroll?*
+Allow: /files/rickroll/main.webm$
+Allow: /files/rickroll/main.webm?*
+Allow: /jokes/chao9$
+Allow: /jokes/chao9?*
+Allow: /jokes/chao9-v2$
+Allow: /jokes/chao9-v2?*
+Allow: /th$
+Allow: /th?*
+Allow: /th/sitemap$
+Allow: /th/sitemap?*
+Allow: /sitemap$
+Allow: /sitemap?*
+Allow: /$
+Allow: /?*
+Disallow: /
+Crawl-Delay: 120

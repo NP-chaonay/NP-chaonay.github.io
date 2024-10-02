@@ -1,1 +1,151 @@
-HELLO WORLD!
+<!DOCTYPE html>
+<html lang="en" class="uses-adaptive-color-scheme" style="font-family:SOV_monomon;">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Welcome : NP-chaonay Main Server</title>
+	<style id="mainCSS"></style>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#808080">
+	<meta name="msapplication-TileColor" content="#808080">
+	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+</head>
+
+<body>
+	<div id="jsAlertDiv">
+		<p>This site required JavaScript to work, เว็บนี้ต้องการ JavaScript เพื่อให้สามารถทำงานได้</p>
+	</div>
+	<div id="mainDiv" hidden>
+		<center>
+			<h1>NP-chaonay Main Server</h1>
+			<p style="font-style:italic"><a href="/th">(สำหรับภาษาไทย)</a></br>
+				<a href="/sitemap">(Sitemap)</a>
+			</p>
+		</center>
+		<!-- adding by shared_en.js -->
+		<div id="ReservedNameForSharedJS_ADS"></div>
+		<h1>Welcoming Msg</h1>
+		<p>- <b>Doodle of the Day/Week</b>: <b>Extra Semester of University...</b></p>
+		<p>- <b>Song of the month/week (updated on 2022-07-05) featured on my website</b>: <a
+				href="https://www.jamendo.com/track/1654021"><b>"Inspirational Dramatic
+					Epic - piano and strings version"</b></a> by <a
+				href="https://www.jamendo.com/artist/498142/WhiteCat"><b style="font-style:italic">"WhiteCat"</b></a>
+			(licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/?ref=openverse">CC BY-NC-SA
+				3.0</a>)
+		</p>
+		<audio id="mainAudioPlayer" src="/files/ungrouped/MainPageIntroSong.mp3" controls loop></audio>
+		<button id="mainAudioRandomSpeed_bt">Random Speed (0.5x-2.0x)</button>
+		<button id="mainAudioAdjustSpeedInTune_bt">Custom Speed (set by key transpose)</button>
+		<button id="mainAudioAdjustSpeed_bt">Custom Speed</button>
+		<button id="mainAudioChangeSrc_bt"">change audio URL</button>
+		<p>- <b>I WANNA BE INTERNET ENTREPRENEUR</b></br>
+		- Want to do your own-hosted website? Hint: APACHE+MDN+WebDev</br>
+		- Wanna put me a message? Goto this page, and then append the path with this: /sendmsg?msg= :and then append with your message (which not contains ASCII symbol)<p>
+		<h1>About This Server</h1>
+		<ul>
+			<li>Operation Time: see <a href="
+			https://main.blogspot.npchaonay.org/2023/05/np-chaonay-server-operation-time.html">here</a></li>
+			<li>WhoIs info: <a href="https://sg.godaddy.com/whois/results.aspx?domain=npchaonay.org">WhoIs Directory
+					from GoDaddy</a> AND <a href="https://who.is/whois/npchaonay.org">WhoIs Directory from who.is</a>
+			</li>
+			<li>This server cannot used in commerical because of current license state of these: Cloudflare)</li>
+			<li>Thanks these service that make this server available</li>
+			<ul>
+				<li><b>GoDaddy</b>, npchaonay.org domain</li>
+				<li><b>Cloudflare</b>, Free plan for DNS hosting AND for-website services</li>
+			</ul>
+			</ul>
+			<h1>Contact Info</h1>
+			<p>- <b>Name</b>: Nuttapong Punpipat (alias=NP-chaonay UUID=878a03c9-1a29-4f70-90d4-0ee41520d3a4)</br>
+				- <b>Web Page " AboutMe "</b>: <a
+					href=" https://drive.google.com/file/d/1GI0K93ZGf0ZpOMXV-YTBVILNsj-4ZWoF/view?usp=sharing">https://drive.google.com/file/d/1GI0K93ZGf0ZpOMXV-YTBVILNsj-4ZWoF/view?usp=sharing</a></br>
+				- <b>E-mail</b>: <a href=" mailto://nuttapongpunpipat@gmail.com">nuttapongpunpipat@gmail.com</a></br>
+				- <b>Personal Facebook</b>: <a href="https://www.facebook.com/NP-chaonay">Nuttapong Punpipat</a></br>
+				- <b>Facebook page</b>: <a href="https://www.facebook.com/NPchaonayProduction">NP-chaonay
+					Production</a></br>
+				- <b>GitHub</b>: <a href="https://www.github.com/NP-chaonay">NP-chaonay</a></p>
+			<h1>TODO about my SERVER (not sorted)</h1>
+			<p>- Get Public IPv6</br>
+				- choose FONT!! + set text that should be bold</br>
+				- Contact Info and some of above</br>
+				- Disclaimer+ToS+Privacy Notice (I'm >=18yrs old no worry)</br>
+				- FAVICON</br>
+				- shared js + random color for bg/fg but for other pages!</br>
+				- music player,separate as app and inserted as iframe in this page</br>
+				- HTTPS!</br>
+				- ads for family+friends</br>
+				- Invert Godaddy logo when dark mode</br>
+				- Section "About this server" and random web color</br>
+				- Ambient Online Radio</p>
+	</div>
+	<script src="/js/shared.js"></script>
+	<script src="/js/shared_en.js"></script>
+	<script>
+		// [Function Zone/mainAudioPlayer]
+		npchaonay_website.main.mainAudioAdjustSpeed_bt__onclick = function mainAudioAdjustSpeed_bt__onclick() {
+			isError = false;
+			while (1) {
+				if (isError) { tmp = prompt("Previous value is invalid. (or too close to 0)"); }
+				else { tmp = prompt("Input your Speed\n+ Value Range is 0<x<=2\n+ Current speed: " + npchaonay_website.main.mainAudioPlayer.playbackRate); }
+				if (tmp === null) { return; }
+				try { tmp = Number(tmp); }
+				catch (TypeError) { isError = true; continue; }
+				if (tmp.toString() === "NaN" || tmp === 0 || tmp === Infinity || tmp === -Infinity) { isError = true; continue; }
+				if (tmp > 2 || tmp <= 0) { isError = true; continue; }
+				npchaonay_website.main.mainAudioPlayer.playbackRate = tmp; break;
+			}
+		}
+		npchaonay_website.main.mainAudioAdjustSpeedInTune_bt__onclick = function mainAudioAdjustSpeedInTune_bt__onclick() {
+			isError = false;
+			isSpecialError = false;
+			while (1) {
+				if (isSpecialError) { isSpecialError = false; tmp = prompt("Previous value is valid but due to technical reason, this value and below cannot be used."); }
+				else if (isError) { tmp = prompt("Previous value is invalid."); }
+				else { tmp = prompt("Input your Transpose\n+ Value Range is ...<=x<=12; for ex: -12.25 or 12 or 0\n+ Current Transpose: " + 12 * Math.log2(mainAudioPlayer.playbackRate)); }
+				if (tmp === null) { return; }
+				else if (tmp === "") { isError = true; continue; }
+				// allow decimal
+				//if (tmp.search("\\.")>-1)  {isError=true; continue;}
+				try { tmp = Number(tmp); }
+				catch (TypeError) { isError = true; continue; }
+				if (tmp.toString() === "NaN" || tmp === Infinity || tmp === -Infinity) { isError = true; continue; }
+				if (tmp > 12) { isError = true; continue; }
+				tmp = 2 ** (tmp / 12)
+				if (tmp === 0) { isSpecialError = true; isError = true; continue; }
+				npchaonay_website.main.mainAudioPlayer.playbackRate = tmp; break;
+			}
+		}
+		npchaonay_website.main.mainAudioChangeSrc_bt__onclick = function mainAudioChangeSrc_bt__onclick() {
+			tmp = prompt("Input your URL\n+ Current speed: " + npchaonay_website.main.mainAudioPlayer.playbackRate);
+			if (tmp === null || tmp === "") { }
+			else {
+				tmp1 = npchaonay_website.main.mainAudioPlayer.playbackRate
+				npchaonay_website.main.mainAudioPlayer.src = tmp;
+				npchaonay_website.main.mainAudioPlayer.play();
+				npchaonay_website.main.mainAudioPlayer.playbackRate = tmp1;
+			}
+		}
+		npchaonay_website.main.mainAudioRandomSpeed_bt__onclick = function mainAudioRandomSpeed_bt__onclick() { npchaonay_website.main.mainAudioPlayer.playbackRate = 0.5 + 1.5 * npchaonay_website.shared.npc_random(); }
+		// [Execute Zone/mainAudioPlayer]
+		npchaonay_website.main.mainAudioPlayer = document.getElementById("mainAudioPlayer");
+		document.getElementById("mainAudioRandomSpeed_bt").onclick = npchaonay_website.main.mainAudioRandomSpeed_bt__onclick;
+		document.getElementById("mainAudioAdjustSpeedInTune_bt").onclick = npchaonay_website.main.mainAudioAdjustSpeedInTune_bt__onclick;
+		document.getElementById("mainAudioAdjustSpeed_bt").onclick = npchaonay_website.main.mainAudioAdjustSpeed_bt__onclick;
+		document.getElementById("mainAudioChangeSrc_bt").onclick = npchaonay_website.main.mainAudioChangeSrc_bt__onclick;
+		npchaonay_website.main.mainAudioPlayer.preservesPitch = false;
+		npchaonay_website.main.mainAudioRandomSpeed_bt__onclick();
+	</script>
+</body>
+
+</html>
+<!-- [CommentZone]
+	+ until HTTPS is ready, then we using this
+		<a href="https://drive.google.com/file/d/1wJVnlF1dihQ9hU_v28f3WwIt0bRTlhA5/view?usp=sharing">(Root CA for this HTTPS - Root CA สำหรับ HTTPS นี้)</a>
+		<p>Warning: Becareful about network spoofing, please check if the file's owner is me (check by using E-mail from my trusted S/N profile); Installing malicious root CA file will give dangerous trust to non-genuine server, therefore comunicating between you and non-genuine server may not be alerted (about non-genuine/securiy concerns)<br>
+			คำเตือน: โปรดระวังการปลอมตัวในเครือข่าย กรุณาตรวจสอบเจ้าของไฟล์ว่าเป็นผมจริง ๆ (ดูได้จาก E-mail จาก profile S/N ของผมที่เชื่อถือได้); การติดตั้ง root CA จากผู้ไม่หวังดี จะทำให้เกิดความเชื่อใจ (ที่อันตราย) ต่อ server ปลอม และอาจะทำให้ไม่มีการแจ้งเตือนเรื่องความปลอดภัย เพราะความเชื่อใจที่มีต่อผู้ไม่หวังดี<br><br>
+			</p>
+-->

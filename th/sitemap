@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="th" class="uses-adaptive-color-scheme" style="font-family:SOV_monomon; ">
+	<head>
+		<meta charset="UTF-8" />
+		<title>ผังเว็บ : Server หลักของ NP-chaonay</title>
+		<style id="mainCSS"></style>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#808080">
+		<meta name="msapplication-TileColor" content="#808080">
+		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+	</head>
+	<body>
+		<div id="jsAlertDiv">
+			<p>This site required JavaScript to work, เว็บนี้ต้องการ JavaScript เพื่อให้สามารถทำงานได้</p>
+		</div>
+		<div id="mainDiv" hidden>
+		<center>
+			<h1>ผังเว็บ</h1>
+			<p style="font-style:italic"><a href="/sitemap">(For English)</a></br>
+			<a href="/th">(หน้ายินดีต้อนรับ)</a></p>
+		</center>
+			<p>(ที่แสดง จะรวมแค่รายการที่ประสงค์ให้แสดงลงในรายการนี้อย่างสาธารณะ)</br>
+			- <a href="/">/</a> | รากของเว็บ แต่เป็นภาษาอังกฤษ</br>
+			- <a href="/files/rickroll/main.webm">/files/rickroll/main.webm</a> | ไฟล์เสียง Rickroll</br>
+			- <a href="/jokes/chao9">/jokes/chao9</a> | การเลียนแบบ Chao9 รุ่นที่ 1</br>
+			- <a href="/th">/th</a> | รากของเว็บ</br>
+			- /th/sitemap | ผังเว็บ แต่เป็นภาษาอังกฤษ</br>
+			- <a href="/sitemap">/sitemap</a> | ผังเว็บ</br>
+			- <a href="/rickroll">/rickroll</a> | This will rickroll you...</p>
+		</div>
+		<script src="/js/shared.js"></script>
+		<script src="/js/shared_th.js"></script>
+	</body>
+</html>
